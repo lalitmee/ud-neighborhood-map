@@ -9,7 +9,7 @@ class App extends Component {
   state = {
     places,
     zoom: 6, // Default zoom
-    inatialCenter: { lat: 53.530873, lng: -8.329037 }, // Default place - middle of Ireland
+    inatialCenter: { lat: 26.218287, lng: 78.182831 }, // Centre of the Map - middle of India
     infoWindow: '', // Active infoWindow
     imgs: [], // Photos from unsplash
     imgsUser: [],

@@ -138,10 +138,11 @@ a {
   height: 35px;
   right: 36px;
   top: 51px;
+  left: 24px;
 }
 
 .bm-burger-bars {
-  background: red;
+  background: yellow;
 }
 
 .bm-cross-button {
