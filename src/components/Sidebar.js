@@ -7,7 +7,9 @@ class Sidebar extends Component {
   };
 
   updateQuery = query => {
-    this.setState({ query: query.trim() }); //trim() does not allow making space
+    this.setState({
+      query: query.trim()
+    });
 
     const showingPlaces = this.props.places.filter(place => {
       const placeNorm = place.name.toLowerCase();
@@ -21,7 +23,7 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <section>
+      <section className="sidebar-section">
         <div className="container">
           <div className="search-box">
             <input
@@ -35,8 +37,8 @@ class Sidebar extends Component {
             <span />
           </div>
         </div>
-
         <ul className="list">
+          {!this.state.query && <h2>India's Locations</h2>}
           {this.state.showingPlaces.map(place => (
             <li
               className="list-item"

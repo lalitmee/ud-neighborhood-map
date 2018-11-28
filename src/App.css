@@ -2,14 +2,22 @@
   display: flex;
 }
 
+h2 {
+  margin: 0;
+}
+
 /***********
  * SIDEBAR *
  ***********/
 
+.sidebar-section {
+  position: relative;
+}
+
 .container {
   position: absolute;
   left: 47%;
-  top: 5%;
+  top: -8%;
   transform: translate(-50%);
 }
 
@@ -92,6 +100,9 @@
 
 .list {
   list-style-type: none;
+  text-align: center;
+  margin-top: 25%;
+  margin-left: -23%;
 }
 
 .list-item {
@@ -100,8 +111,9 @@
   cursor: pointer;
 }
 
-.list-item:hover {
-  color: wheat;
+.list-item:hover,
+.list-item:active {
+  color: yellowgreen;
   font-size: 20px;
 }
 
@@ -157,7 +169,7 @@ a {
 
 .bm-menu {
   background: #373a47;
-  padding: 2.5em 1.5em 0;
+  padding: 9px;
   font-size: 1.15em;
 }
 
