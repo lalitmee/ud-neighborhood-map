@@ -2,13 +2,84 @@
   display: flex;
 }
 
-/*
- *
- *
- Sidebar
- *
- *
- */
+/***********
+ * SIDEBAR *
+ ***********/
+
+.container {
+  position: absolute;
+  left: 47%;
+  top: 5%;
+  transform: translate(-50%);
+}
+
+.search-box input[type="text"] {
+  border: none;
+  background: none;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  transition: all .25s ease-in .25s;
+  color: transparent;
+  font-size: .75rem;
+  line-height: 25px;
+}
+
+.search-box input[type="text"]:hover {
+  cursor: pointer;
+}
+
+.search-box input[type="text"]:hover:focus {
+  cursor: text;
+}
+
+.search-box input[type="text"]:hover+span {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-box input[type="text"]:focus {
+  width: 200px;
+  padding: 0 10px;
+  outline: none;
+  color: black;
+  background: none;
+  color: white;
+}
+
+.search-box input[type="text"]:focus+span {
+  width: 200px;
+}
+
+.search-box input[type="text"]:focus+span::before {
+  width: 2px;
+  opacity: 0;
+  transition: all .25s ease-in;
+}
+
+.search-box input[type="text"]+span {
+  z-index: -1;
+  position: absolute;
+  border: 2px solid white;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  transition: all .25s ease-in .25s;
+  border-radius: 25px;
+  left: 0;
+}
+
+.search-box input[type="text"]+span::before {
+  transition: all .25s ease-in .5s;
+  transform-origin: left top;
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(26px, -2px);
+}
+
 
 .search {
   background: #f3f2ed;
@@ -34,42 +105,33 @@
   font-size: 20px;
 }
 
-/*
- *
- *
- INFO WINDOW
- *
- *
- */
+/**************
+ * MAP WINDOW *
+ **************/
 
- .images {
-   height: 35vh;
-   border-radius: 5px;
- }
+.images {
+  height: 35vh;
+  border-radius: 5px;
+}
 
- .gm-style .gm-style-iw {
-   text-align: center;
- }
+.gm-style .gm-style-iw {
+  text-align: center;
+}
 
- figcaption {
-   text-align: left;
- }
+figcaption {
+  text-align: left;
+}
 
- a {
-   text-decoration: none;
-   font-weight: bold;
-   color: black;
- }
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
 
-/*
- *
- *
- HAMBURGER MENU
- *
- *
- */
+/******************
+ * HAMBURGER MENU *
+ ******************/
 
-/* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 36px;
@@ -78,52 +140,40 @@
   top: 51px;
 }
 
-/* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: red;
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 24px;
   width: 24px;
   right: 50px;
 }
 
-/* Color/shape of close button cross */
 .bm-cross {
   background: #bdc3c7;
 }
 
-/* General sidebar styles */
 .bm-menu {
   background: #373a47;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
-/* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #373a47;
 }
 
-/* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
   height: 100%;
 }
 
-/* Individual item */
 .bm-item {
   display: inline-block;
 }
 
-/* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-
-
-
-
