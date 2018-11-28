@@ -1,0 +1,129 @@
+.App {
+  display: flex;
+}
+
+/*
+ *
+ *
+ Sidebar
+ *
+ *
+ */
+
+.search {
+  background: #f3f2ed;
+  width: 100%;
+  padding: 3px;
+  border-radius: 15px;
+  border-color: black;
+  border-width: 5px
+}
+
+.list {
+  list-style-type: none;
+}
+
+.list-item {
+  padding: 10px;
+  margin: 15px 0px 15px 0px;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  color: wheat;
+  font-size: 20px;
+}
+
+/*
+ *
+ *
+ INFO WINDOW
+ *
+ *
+ */
+
+ .images {
+   height: 35vh;
+   border-radius: 5px;
+ }
+
+ .gm-style .gm-style-iw {
+   text-align: center;
+ }
+
+ figcaption {
+   text-align: left;
+ }
+
+ a {
+   text-decoration: none;
+   font-weight: bold;
+   color: black;
+ }
+
+/*
+ *
+ *
+ HAMBURGER MENU
+ *
+ *
+ */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 35px;
+  right: 36px;
+  top: 51px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: red;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  right: 50px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  height: 100%;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
