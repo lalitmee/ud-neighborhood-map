@@ -81,9 +81,10 @@ class App extends Component {
       imgsUser: data.results[0].user,
       imagesLink: data.results[0].user.links.html
     });
+  };
 
   errText = err => {
-    console.log('The erroris : ', err);
+    console.log('The error is : ', err);
   };
 
   componentDidCatch(error) {
