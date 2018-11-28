@@ -5,14 +5,14 @@ function MapContainer(props) {
   return (
     <Map
       zoom={props.zoom}
-      inatialCenter={props.inatialCenter}
+      mapCenter={props.mapCenter}
       places={props.places}
       infoWindow={props.infoWindow}
       showInfoWindow={props.showInfoWindow}
       closeInfowWindow={props.closeInfowWindow}
       imgs={props.imgs}
       imgsUser={props.imgsUser}
-      imgsUserLink={props.imgsUserLink}
+      imagesLink={props.imagesLink}
       errMsg={props.errMsg}
       googleMapURL={
         'https://maps.googleapis.com/maps/api/js?key=AIzaSyCaF1dunaBCxcuIs1TAMUKkCEGajOkXivw'

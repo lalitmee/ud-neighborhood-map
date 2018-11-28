@@ -31,7 +31,7 @@ class PlaceMarker extends Component {
               )}
               <figcaption>
                 Photo by{' '}
-                <a href={this.props.imgsUserLink} target="_blank">
+                <a href={this.props.imagesLink} target="_blank">
                   {this.props.imgsUser.name}
                 </a>{' '}
                 / <a href="https://unsplash.com/">Unsplash</a>

@@ -4,7 +4,7 @@ import PlaceMarker from './PlaceMarker';
 
 const Map = withScriptjs(
   withGoogleMap(props => {
-    const inatialCenter = props.inatialCenter;
+    const mapCenter = props.mapCenter;
     const zoom = props.zoom;
     const markers = props.places.map(place => (
       <PlaceMarker
@@ -16,13 +16,13 @@ const Map = withScriptjs(
         closeInfowWindow={props.closeInfowWindow}
         img={props.imgs}
         imgsUser={props.imgsUser}
-        imgsUserLink={props.imgsUserLink}
+        imagesLink={props.imagesLink}
         errMsg={props.errMsg}
       />
     ));
 
     return (
-      <GoogleMap zoom={zoom} center={inatialCenter}>
+      <GoogleMap zoom={zoom} center={mapCenter}>
         {markers}
       </GoogleMap>
     );

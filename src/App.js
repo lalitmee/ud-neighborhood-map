@@ -7,26 +7,31 @@ import places from './places.js';
 
 class App extends Component {
   state = {
-    places,
-    zoom: 6, // Default zoom
-    inatialCenter: { lat: 26.218287, lng: 78.182831 }, // Centre of the Map - middle of India
-    infoWindow: '', // Active infoWindow
-    imgs: [], // Photos from unsplash
-    imgsUser: [],
-    imgsUserLink: [],
+    errMsg: '',
     selectedImg: '',
+    infoWindow: '',
+    mapCenter: { lat: 26.218287, lng: 78.182831 },
+    zoom: 6,
+    imgs: [],
+    imgsUser: [],
+    imagesLink: [],
     hasError: false,
-    errMsg: ''
+    places
   };
 
-  // Showing infowindow func
+  /**
+   * For showing the info of the places
+   */
   showInfoWindow = place => {
     this.setState({
       infoWindow: place.id,
       selectedImg: place.name
     });
   };
-  // Closing infowindow func
+
+  /**
+   * for closing the info of the places
+   */
   closeInfowWindow = () => {
     this.setState({
       infoWindow: '',
@@ -34,7 +39,10 @@ class App extends Component {
     });
   };
 
-  // Filtering markers according to input / search
+  /**
+   * Filtering markers according to the input which user will enter in the
+   * search box
+   */
   filterMarkers = showingPlaces => {
     let updatedPlaces = JSON.parse(JSON.stringify(this.state.places));
     updatedPlaces.forEach(place => {
@@ -44,7 +52,9 @@ class App extends Component {
     this.setState({ places: updatedPlaces });
   };
 
-  // Fethich data from Unsplas API
+  /**
+   * Fethich Images from Unsplash API
+   */
   componentDidUpdate = () => {
     this.fetchData();
   };
@@ -69,17 +79,13 @@ class App extends Component {
     this.setState({
       imgs: data.results[0].urls,
       imgsUser: data.results[0].user,
-      imgsUserLink: data.results[0].user.links.html
+      imagesLink: data.results[0].user.links.html
     });
-    //console.log('Success!');
-  };
 
   errText = err => {
-    console.log('This is error: ', err);
-    this.setState({ errMsg: 'Somethhing happen. Please, reload the page.' });
+    console.log('The erroris : ', err);
   };
 
-  // If an error
   componentDidCatch(error) {
     this.setState({ hasError: true });
   }
@@ -98,18 +104,18 @@ class App extends Component {
         {!this.state.hasError && (
           <MapContainer
             zoom={this.state.zoom}
-            inatialCenter={this.state.inatialCenter}
+            mapCenter={this.state.mapCenter}
             places={this.state.places}
             infoWindow={this.state.infoWindow}
             showInfoWindow={this.showInfoWindow}
             closeInfowWindow={this.closeInfowWindow}
             imgs={this.state.imgs}
             imgsUser={this.state.imgsUser}
-            imgsUserLink={this.state.imgsUserLink}
+            imagesLink={this.state.imagesLink}
             errMsg={this.state.errMsg}
           />
         )}
-        {this.state.hasError && <h2>Ops, something went wrong!</h2>}
+        {this.state.hasError && <h2>Oops, something went wrong!</h2>}
 
         <Menu styles={style}>
           <Sidebar
