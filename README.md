@@ -21,7 +21,7 @@ npm start
 
 These steps will start your application on the port [localhost:3000](http://localhost:3000/) where you can play with the app.
 
-One most important thing about service workers that we enable the service workers for only the production mode not for development mode otherwise development of the application will take a lot of time because then we have to unregister the service worker and all.
+- **Service Worker:** One most important thing about service workers that we enable the service workers for only the production mode not for development mode otherwise development of the application will take a lot of time because then we have to unregister the service worker and all.
 
 ### What and Why
 
